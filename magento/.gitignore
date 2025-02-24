@@ -1,0 +1,71 @@
+# Diretórios gerados pelo Magento
+/var/*
+!/var/.htaccess
+!/var/index.php
+
+/pub/static/*
+!/pub/static/.htaccess
+!/pub/static/index.php
+
+/pub/media/*
+!/pub/media/.htaccess
+!/pub/media/index.php
+
+/app/etc/env.php
+/app/etc/config.php
+/auth.json
+
+# Arquivos de cache
+/var/cache/*
+/var/page_cache/*
+/var/view_preprocessed/*
+
+# Arquivos de sessão
+/var/session/*
+
+# Arquivos de log
+/var/log/*
+
+# Arquivos gerados pelo Composer
+/vendor/*
+!/vendor/.htaccess
+!/vendor/index.php
+
+# Arquivos de configuração local
+/app/etc/*.local.xml
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de ambiente
+.env
+.env.local
+
+# Arquivos de backup
+*.bak
+*.zip
+*.tar.gz
+
+# Arquivos de desenvolvimento
+/node_modules/
+/bower_components/
+/nbproject/
+/.npm/
+/.bower-cache/
+/.grunt/
+/.sass-cache/
+/.tmp/
+/.DS_Store
+Thumbs.db
+
+# Arquivos de teste
+/dev/tests/**/*
+!/dev/tests/.htaccess
+!/dev/tests/index.php
+
+# Arquivos de integração
+/.github/
+/.gitlab-ci.yml
