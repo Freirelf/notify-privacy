@@ -1,0 +1,13 @@
+<?php
+$customerId = $block->getCustomerId();
+$hasAccepted = $block->hasAcceptedPrivacyPolicy($customerId);
+?>
+
+<?php if (!$hasAccepted): ?>
+    <div id="privacy-modal" class="privacy-modal">
+        <div class="privacy-content">
+            <p>Atualizamos nossa política de privacidade. Clique em "Aceitar" para continuar.</p>
+            <button id="accept-privacy">Aceitar</button>
+        </div>
+    </div>
+<?php endif; ?>
