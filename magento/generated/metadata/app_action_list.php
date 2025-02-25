@@ -1,5 +1,5 @@
 <?php return array (
-  'custom\\privacynotification\\controller\\accept' => 'Custom\\PrivacyNotification\\Controller\\Accept',
+  'custom\\privacynotification\\controller\\privacy\\accept' => 'Custom\\PrivacyNotification\\Controller\\Privacy\\Accept',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imscallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsCallback',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imsreauthcallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsReauthCallback',
   'magento\\adminanalytics\\controller\\adminhtml\\config\\disableadminusage' => 'Magento\\AdminAnalytics\\Controller\\Adminhtml\\Config\\DisableAdminUsage',

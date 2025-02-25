@@ -1,13 +1,21 @@
-<?php
-$customerId = $block->getCustomerId();
-$hasAccepted = $block->hasAcceptedPrivacyPolicy($customerId);
-?>
-
-<?php if (!$hasAccepted): ?>
-    <div id="privacy-modal" class="privacy-modal">
-        <div class="privacy-content">
-            <p>Atualizamos nossa política de privacidade. Clique em "Aceitar" para continuar.</p>
-            <button id="accept-privacy">Aceitar</button>
-        </div>
+<?php if ($block->shouldShowModal()): ?>
+<div id="privacy-modal" class="modal">
+    <div class="modal-content">
+        <h2>Atualização da Política de Privacidade</h2>
+        <p>Precisamos da sua confirmação para continuar utilizando a plataforma.</p>
+        <button id="accept-privacy-policy">Aceitar</button>
     </div>
+</div>
+
+<script>
+    document.getElementById("accept-privacy-policy").addEventListener("click", function () {
+        fetch('/privacy/accept', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("privacy-modal").style.display = "none";
+                }
+            });
+    });
+</script>
 <?php endif; ?>
